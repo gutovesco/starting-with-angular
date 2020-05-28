@@ -1,6 +1,6 @@
 export default class Todo{
   constructor(
-    public id: string,
+    public id: any,
     public title: string,
     public done: boolean
   ){}
