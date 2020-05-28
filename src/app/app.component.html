@@ -11,6 +11,7 @@
   <fieldset>
     <label>Tarefa</label>
       <input placeholder="Titulo da tarefa" maxlength="30" formControlName="title" type="text">
-    <button (click)="addTodo(todo)">Salvar</button>
+      <div *ngIf="form.controls.title.invalid && !form.controls.title.pristine"><small>Este campo deve conter entre 3 e 30 caracteres</small></div>
+    <button [disabled]="form.invalid">Salvar</button>
   </fieldset>
 </form>
